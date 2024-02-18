@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tkk28f13y43o"]
+
+[ext_resource type="Script" path="res://node2.gd" id="1_ogfvg"]
+
+[sub_resource type="Gradient" id="Gradient_0bv7k"]
+
+[node name="Node2" type="Node"]
+script = ExtResource("1_ogfvg")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 240, 32, 272, 64, 240, 96, 272, 128, 240, 160, 272, 192, 240, 224, 272, 256, 240, 288, 272, 320, 240, 352, 272, 384, 240, 416, 272, 448, 240, 480, 272, 512, 240)
+default_color = Color(1, 1, 1, 0.513726)
+gradient = SubResource("Gradient_0bv7k")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
